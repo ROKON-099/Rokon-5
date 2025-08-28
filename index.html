@@ -11,33 +11,44 @@
 style="font-family: 'Noto Sans Bengali',
  sans-serif;">
  
- <!-- ন্যাভিগেশন বার- (কয়েন+ হার্ট+কপি count)-(coincount)-(btn-copycount)-
+ <!-- number-1 ন্যাভিগেশন বার- (কয়েন+ হার্ট+কপি count)-(coincount)-(btn-copycount)-
   (lifecount) -->
   
-  <nav class="bg-white shadow-md flex items-center justify-between px-4 sm:px-6 py-3">
-  <div class="flex items-center space-x-2">
-    <img src="logo.png" alt="Logo" class="h-8 w-8" />
-    <div class="text-green-600 font-bold text-lg">Emergency Service</div>
-  </div>
-  <div class="flex items-center space-x-3 sm:space-x-4">
-    <div class="bg-[#ECFFF0] flex items-center gap-2 p-2 px-3 rounded text-sm sm:text-base">
-      <div id="lifeCount">0</div>
-      <img src="heart.png" alt="Heart Icon" class="h-5 w-5 sm:h-6 sm:w-6" />
+   <nav class="bg-white shadow-md flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-3 gap-2 sm:gap-0">
+    <div class="flex items-center space-x-2">
+      <img src="logo.png" alt="Logo" class="h-8 w-8 sm:h-10 sm:w-10" />
+      <div class="text-green-600 font-bold text-base sm:text-lg">Emergency Service</div>
     </div>
-    <div class="bg-[#ECFFF0] flex items-center gap-2 p-2 px-3 rounded text-sm sm:text-base">
-      <div id="coincount">100</div>
-      <img src="coin.png" alt="Coin Icon" class="h-5 w-5 sm:h-6 sm:w-6" />
+    <div class="flex items-center space-x-2 sm:space-x-3 mt-2 sm:mt-0">
+      <div class="bg-[#ECFFF0] flex items-center gap-2 p-2 px-3 rounded text-xs sm:text-base">
+        <div id="lifeCount">0</div>
+        <img src="heart.png" alt="Heart Icon" class="h-4 w-4 sm:h-6 sm:w-6" />
+      </div>
+      <div class="bg-[#ECFFF0] flex items-center gap-2 p-2 px-3 rounded text-xs sm:text-base">
+        <div id="coinBalance">100</div>
+        <img src="coin.png" alt="Coin Icon" class="h-4 w-4 sm:h-6 sm:w-6" />
+      </div>
+      <div class="bg-[#ECFFF0] flex items-center gap-2 p-2 px-3 rounded text-xs sm:text-base">
+        <button class="bg-green-600 text-white flex gap-1 px-2 sm:px-4 py-1 sm:py-2 rounded-lg sm:rounded-xl hover:bg-green-700 transition text-xs sm:text-base">
+          <div id="copyCount">0</div> copy
+        </button>
+      </div>
     </div>
-    <div class="bg-[#ECFFF0] flex items-center gap-2 p-2 px-3 rounded text-sm sm:text-base">
-      
-      <button  class="bg-green-600 text-white flex gap-1 px-3 sm:px-4 py-2 rounded-xl hover:bg-green-700 transition text-sm sm:text-base">
-       <div id="copyCount">0</div> copy
-      </button>
-    </div>
-  </div>
-</nav>  
+  </nav>
 
 
+<!-- Number-2 জরুরি সেবা ডিরেক্টরি   -->
+
+ <section class="bg-[#016345] relative py-6 px-4 text-center">
+    <div class="relative flex flex-col items-center space-y-2 text-white">
+      <img src="logo.png" alt="logo" class="h-14 w-14 sm:h-16 sm:w-16
+       rounded-full mt-2 border-2 border-white" />
+      <h1 class="text-xl sm:text-3xl font-bold">জরুরি সেবা ডিরেক্টরি</h1>
+      <p class="whitespace-nowrap text-center text-xs sm:text-base">
+        Government Emergency Service at your fingertip – Project by Government of the People's Republic of Bangladesh
+      </p>
+    </div>
+  </section>
 
 
 
