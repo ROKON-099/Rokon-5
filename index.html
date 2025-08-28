@@ -25,7 +25,7 @@ style="font-family: 'Noto Sans Bengali',
         <img src="heart.png" alt="Heart Icon" class="h-4 w-4 sm:h-6 sm:w-6" />
       </div>
       <div class="bg-[#ECFFF0] flex items-center gap-2 p-2 px-3 rounded text-xs sm:text-base">
-        <div id="coinBalance">100</div>
+        <div id="coincount">100</div>
         <img src="coin.png" alt="Coin Icon" class="h-4 w-4 sm:h-6 sm:w-6" />
       </div>
       <div class="bg-[#ECFFF0] flex items-center gap-2 p-2 px-3 rounded text-xs sm:text-base">
@@ -286,18 +286,100 @@ style="font-family: 'Noto Sans Bengali',
 
 
     <!-- card-10 কল হিস্টিরিয় -->
-    <div class="lg:col-span-1 bg-white rounded-lg shadow px-4 sm:px-6 py-4 max-w-full sm:max-w-md mx-auto w-full">
-      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 mb-4">
-        <div class="flex items-center gap-1">
-          <img src="history.png" alt="History Logo" class="w-4 h-4 sm:w-5 sm:h-5">
-          <h2 class="text-xs sm:text-sm">Call History</h2>
-        </div>
-        <div>
-          <button onclick="clearHistory()" class="px-2 py-1 text-xs sm:text-sm text-white bg-[#16A34A] rounded-lg">
-            Clear
-          </button>
-        </div>
-      </div>
+
+    
+<div class="lg:col-span-1 bg-white rounded-lg shadow px-4 sm:px-6 py-4 max-w-full sm:max-w-md mx-auto w-full">
+  <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0 mb-4">
+    <div class="flex items-center gap-1">
+      <img src="history.png" alt="History Logo" class="w-4 h-4 sm:w-5 sm:h-5">
+      <h2 class="text-xs sm:text-sm">Call History</h2>
+    </div>
+    <div>
+      <button onclick="clearHistory()" class="px-2 py-1 text-xs sm:text-sm text-white bg-[#16A34A] rounded-lg">
+        Clear
+      </button>
+    </div>
+  </div>
+
+  <ul id="callHistory" class="text-xs sm:text-sm text-gray-700 space-y-1"></ul>
+</div>
+
+
+      <!--js function-->
+      <script>
+    let coins = 100;
+    let life = 0;
+    let copyNumberCount = 0;
+
+    const lifeDisplay = document.getElementById("lifeCount");
+    const coinDisplay = document.getElementById("coincount");
+    const copyDisplay = document.getElementById("copyCount");
+
+    function updateDisplays() {
+      lifeDisplay.innerText = life;
+      coinDisplay.innerText = coins;
+      copyDisplay.innerText = copyNumberCount;
+    }
+
+    function makeCall(serviceName) {
+      if (coins >= 20) {
+        coins -= 20;
+        updateDisplays();
+        alert("📞 " + serviceName + " এ কল করা হয়েছে! ২০ কয়েন কাটা হলো।");
+
+        const history = document.getElementById("callHistory");
+        const time = new Date().toLocaleTimeString();
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${serviceName}:</strong> ${time}`;
+        history.prepend(li);
+      } else {
+        alert("⚠️ আপনার একাউন্ট এর পর্যাপ্ত ব্যালেন্স নেই !");
+      }
+    }
+
+    function copyNumber(number) {
+      navigator.clipboard.writeText(number).then(() => {
+        alert("✅ নাম্বার কপি হয়েছে: " + number);
+        copyNumberCount++;
+        updateDisplays();
+      });
+    }
+
+    function addLife() {
+      life++;
+      updateDisplays();
+    }
+
+    function clearHistory() {
+      document.getElementById("callHistory").innerHTML = "";
+      life = 0;
+      copyNumberCount = 0;
+      updateDisplays();
+    }
+
+    document.querySelectorAll(".call-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const card = btn.closest(".bg-white");
+        const serviceName = card.querySelector("h2").innerText;
+        makeCall(serviceName);
+      });
+    });
+
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const number = btn.getAttribute("call-number");
+        copyNumber(number);
+      });
+    });
+
+    document.querySelectorAll(".heart-btn").forEach(btn => {
+      btn.addEventListener("click", addLife);
+    });
+  </script>
+
+</body>
+</html>
+
 
 
 
