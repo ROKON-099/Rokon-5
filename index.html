@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Directory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Top Navigation -->
+  <nav class="bg-white shadow-md flex items-center justify-between px-6 py-3">
+    <div class="flex items-center space-x-2">
+      <img src="logo.png" alt="Logo" class="h-8 w-8" />
+      <span class="text-green-600 font-bold text-lg">Emergency Service</span>
+    </div>
+    <div class="flex items-center space-x-4">
+    <div class="bg-[#ECFFF0] flex p-2 ">
+        <div>0</div>
+      <img src="heart.png" alt="Heart Icon" class="h-6 w-6" />
+    </div>
+    <div class="flex items-center space-x-4">
+      <div class="bg-[#ECFFF0] flex items-center gap-2 p-2 px-3 rounded">
+        <span id="coinBalance">100</span>
+        <img src="coin.png" alt="Coin Icon" class="h-6 w-6" />
+      </div>
+      <button class="bg-green-600 text-white px-5 py-1 rounded-2xl hover:bg-green-700 transition">
+        Copy
+      </button>
+    </div>
+  </nav>
+
+  <!-- Center Banner -->
+  <section class=" bg-gradient-to-b from bg-[#004A33] text-white py-6 px-4">
+    <div class="flex flex-col items-center space-y-2">
+      <img src="logo.png" alt="Emblem" class="h-16 w-16 rounded-full mt-2 border-2 border-white" />
+      <h1 class="text-2xl font-bold">Emergency Service Directory</h1>
+      <p class="text-center max-w-lg">
+        Government Emergency Service at your fingertip – Project by Government of the People's Republic of Bangladesh
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Grid -->
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 p-6 min-h-screen">
+
+    <!-- Emergency Cards -->
+    <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-3 gap-4">
+      <!-- Card Template -->
+      <div class="bg-white rounded-lg shadow p-4 space-y-2">
+        <h2 class="text-lg font-bold">জাতীয় জরুরি সেবা</h2>
+        <p class="text-sm text-gray-600">National Emergency</p>
+        <p class="text-xl font-semibold text-green-700">999</p>
+        <div class="flex space-x-2">
+          <button class="bg-blue-600 text-white px-3 py-1 rounded call-btn">📞 Call</button>
+          <button class="bg-green-600 text-white px-3 py-1 rounded copy-btn" data-number="999">📋 Copy</button>
+        </div>
+      </div>
+
+      <!-- Repeat other cards below (Police, Fire, Ambulance, etc.) -->
+      <!-- Example: Police -->
+      <div class="bg-white rounded-lg shadow p-4 space-y-2">
+        <h2 class="text-lg font-bold">Police</h2>
+        <p class="text-sm text-gray-600">পুলিশ</p>
+        <p class="text-xl font-semibold text-green-700">999</p>
+        <div class="flex space-x-2">
+          <button class="bg-blue-600 text-white px-3 py-1 rounded call-btn">📞 Call</button>
+          <button class="bg-green-600 text-white px-3 py-1 rounded copy-btn" data-number="999">📋 Copy</button>
+        </div>
+      </div>
+      <!-- Emergency Cards -->
+<div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+
+  <!-- National Emergency -->
+  <div class="bg-white rounded-lg shadow p-4 space-y-2">
+    <h2 class="text-lg font-bold">জাতীয় জরুরি সেবা</h2>
+    <p class="text-sm text-gray-600">National Emergency</p>
+    <p class="text-xl font-semibold text-green-700">999</p>
+    <div class="flex space-x-2">
+      <button class="bg-blue-600 text-white px-3 py-1 rounded call-btn">📞 Call</button>
+      <button class="bg-green-600 text-white px-3 py-1 rounded copy-btn" data-number="999">📋 Copy</button>
+    </div>
+  </div>
+
+  <!-- Police -->
+  <div class="bg-white rounded-lg shadow p-4 space-y-2">
+    <h2 class="text-lg font-bold">Police</h2>
+    <p class="text-sm text-gray-600">পুলিশ</p>
+    <p class="text-xl font-semibold text-green-700">999</p>
+    <div class="flex space-x-2">
+      <button class="bg-blue-600 text-white px-3 py-1 rounded call-btn">📞 Call</button>
+      <button class="bg-green-600 text-white px-3 py-1 rounded copy-btn" data-number="999">📋 Copy</button>
+    </div>
+  </div>
+
+  <!-- Fire Service -->
+  <div class="bg-white rounded-lg shadow p-4 space-y-2">
+    <h2 class="text-lg font-bold">Fire Service</h2>
+    <p class="text-sm text-gray-600">ফায়ার সার্ভিস</p>
+    <p class="text-xl font-semibold text-green-700">999</p>
+    <div class="flex space-x-2">
+      <button class="bg-blue-600 text-white px-3 py-1 rounded call-btn">📞 Call</button>
+      <button class="bg-green-600 text-white px-3 py-1 rounded copy-btn" data-number="999">📋 Copy</button>
+    </div>
+  </div>
+
+  <!-- Ambulance -->
+  <div class="bg-white rounded-lg shadow p-4 space-y-2">
+    <h2 class="text-lg font-bold">Ambulance</h2>
+    <p class="text-sm text-gray-600">অ্যাম্বুলেন্স</p>
+    <p class="text-xl font-semibold text-green-700">1994-999999</p>
+    <div class="flex space-x-2">
+      <button class="bg-blue-600 text-white px-3 py-1 rounded call-btn">📞 Call</button>
+      <button class="bg-green-600 text-white px-3 py-1 rounded copy-btn" data-number="1994-999999">📋 Copy</button>
+    </div>
+  </div>
+
+  <!-- Women & Child Helpline -->
+  <div class="bg-white rounded-lg shadow p-4 space-y-2">
+    <h2 class="text-lg font-bold">Women & Child Helpline</h2>
+    <p class="text-sm text-gray-600">নারী ও শিশু সহায়তা</p>
+    <p class="text-xl font-semibold text-green-700">109</p>
+    <div class="flex space-x-2">
+      <button class="bg-blue-600 text-white px-3 py-1 rounded call-btn">📞 Call</button>
+      <button class="bg-green-600 text-white px-3 py-1 rounded copy-btn" data-number="109">📋 Copy</button>
+    </div>
+  </div>
+
+  <!-- Anti-Corruption -->
+  <div class="bg-white rounded-lg shadow p-4 space-y-2">
+    <h2 class="text-lg font-bold">Anti-Corruption</h2>
+    <p class="text-sm text-gray-600">দুর্নীতি দমন</p>
+    <p class="text-xl font-semibold text-green-700">106</p>
+    <div class="flex space-x-2">
+      <button class="bg-blue-600 text-white px-3 py-1 rounded call-btn">📞 Call</button>
+      <button class="bg-green-600 text-white px-3 py-1 rounded copy-btn" data-number="106">📋 Copy</button>
+    </div>
+  </div>
+
+  <!-- Electricity Outage -->
+  <div class="bg-white rounded-lg shadow p-4 space-y-2">
+    <h2 class="text-lg font-bold">Electricity Outage</h2>
+    <p class="text-sm text-gray-600">বিদ্যুৎ বিভ্রাট</p>
+    <p class="text-xl font-semibold text-green-700">16216</p>
+    <div class="flex space-x-2">
+      <button class="bg-blue-600 text-white px-3 py-1 rounded call-btn">📞 Call</button>
+      <button class="bg-green-600 text-white px-3 py-1 rounded copy-btn" data-number="16216">📋 Copy</button>
+    </div>
+  </div>
+
+  <!-- Telecommunication -->
+  <div class="bg-white rounded-lg shadow p-4 space-y-2">
+    <h2 class="text-lg font-bold">Telecommunication</h2>
+    <p class="text-sm text-gray-600">টেলিযোগাযোগ</p>
+    <p class="text-xl font-semibold text-green-700">16445</p>
+    <div class="flex space-x-2">
+      <button class="bg-blue-600 text-white px-3 py-1 rounded call-btn">📞 Call</button>
+      <button class="bg-green-600 text-white px-3 py-1 rounded copy-btn" data-number="16445">📋 Copy</button>
+    </div>
+  </div>
+
+  <!-- Bangladesh Railway -->
+  <div class="bg-white rounded-lg shadow p-4 space-y-2">
+    <h2 class="text-lg font-bold">Bangladesh Railway</h2>
+    <p class="text-sm text-gray-600">বাংলাদেশ রেলওয়ে</p>
+    <p class="text-xl font-semibold text-green-700">163</p>
+    <div class="flex space-x-2">
+      <button class="bg-blue-600 text-white px-3 py-1 rounded call-btn">📞 Call</button>
+      <button class="bg-green-600 text-white px-3 py-1 rounded copy-btn" data-number="163">📋 Copy</button>
+    </div>
+  </div>
+
+</div>
+
+      <!-- Add other services similarly... -->
+    </div>
+
+    <!-- Call History Sidebar -->
+    <div class="bg-white rounded-lg shadow p-4">
+      <h2 class="text-xl font-bold mb-4">📜 Call History</h2>
+      <ul class="space-y-2 text-sm text-gray-700" id="callHistory">
+        <!-- History items will be added here -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    let coins = 100;
+
+    function updateCoinDisplay() {
+      document.getElementById("coinBalance").innerText = coins;
+    }
+
+    function makeCall(serviceName) {
+      if (coins >= 20) {
+        coins -= 20;
+        updateCoinDisplay();
+        alert("📞 " + serviceName + " এ কল করা হয়েছে! ২০ কয়েন কাটা হলো।");
+
+        const history = document.getElementById("callHistory");
+        const time = new Date().toLocaleTimeString();
+        const li = document.createElement("li");
+        li.innerHTML = `<strong>${serviceName}:</strong> ${time}`;
+        history.prepend(li);
+      } else {
+        alert("⚠️ পর্যাপ্ত কয়েন নেই কল করার জন্য!");
+      }
+    }
+
+    function copyNumber(number) {
+      navigator.clipboard.writeText(number).then(() => {
+        alert("✅ নাম্বার কপি হয়েছে: " + number);
+      });
+    }
+
+    document.querySelectorAll(".call-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const service = btn.closest("div").parentElement.querySelector("h2").innerText;
+        makeCall(service);
+      });
+    });
+
+    document.querySelectorAll(".copy-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const number = btn.getAttribute("data-number");
+        copyNumber(number);
+      });
+    });
+
+    updateCoinDisplay();
+  </script>
+
+</body>
+</html>
