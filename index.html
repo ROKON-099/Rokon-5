@@ -7,8 +7,42 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-<body>
+<body class="bg-gray-100 text-gray-800" 
+style="font-family: 'Noto Sans Bengali',
+ sans-serif;">
+ 
+ <!-- ন্যাভিগেশন বার- (কয়েন+ হার্ট+কপি count)-(coincount)-(btn-copycount)-
+  (lifecount) -->
   
+  <nav class="bg-white shadow-md flex items-center justify-between px-4 sm:px-6 py-3">
+  <div class="flex items-center space-x-2">
+    <img src="logo.png" alt="Logo" class="h-8 w-8" />
+    <div class="text-green-600 font-bold text-lg">Emergency Service</div>
+  </div>
+  <div class="flex items-center space-x-3 sm:space-x-4">
+    <div class="bg-[#ECFFF0] flex items-center gap-2 p-2 px-3 rounded text-sm sm:text-base">
+      <div id="lifeCount">0</div>
+      <img src="heart.png" alt="Heart Icon" class="h-5 w-5 sm:h-6 sm:w-6" />
+    </div>
+    <div class="bg-[#ECFFF0] flex items-center gap-2 p-2 px-3 rounded text-sm sm:text-base">
+      <div id="coincount">100</div>
+      <img src="coin.png" alt="Coin Icon" class="h-5 w-5 sm:h-6 sm:w-6" />
+    </div>
+    <div class="bg-[#ECFFF0] flex items-center gap-2 p-2 px-3 rounded text-sm sm:text-base">
+      
+      <button  class="bg-green-600 text-white flex gap-1 px-3 sm:px-4 py-2 rounded-xl hover:bg-green-700 transition text-sm sm:text-base">
+       <div id="copyCount">0</div> copy
+      </button>
+    </div>
+  </div>
+</nav>  
+
+
+
+
+
+
+
   
 </body>
 </html>
